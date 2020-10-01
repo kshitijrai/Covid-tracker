@@ -14,6 +14,7 @@ class MostAffectedPanel extends StatelessWidget {
           return Container(
             margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Image.network(
                   countryData[index]['countryInfo']['flag'],
@@ -30,7 +31,7 @@ class MostAffectedPanel extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  'Deaths:' + countryData[index]['deaths'].toString(),
+                  'Cases:' + countryData[index]['cases'].toString(),
                   style:
                       TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
                 )
