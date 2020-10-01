@@ -1,9 +1,16 @@
+import 'package:covid_tracker/datasource.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
 class Search extends SearchDelegate {
   final List countryList;
 
   Search(this.countryList);
+
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    return ThemeData(brightness: DynamicTheme.of(context).brightness);
+  }
 
   @override
   List<Widget> buildActions(BuildContext context) {
