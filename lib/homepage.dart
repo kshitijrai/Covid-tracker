@@ -12,7 +12,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Map worldData;
   fetchWorldWideData() async {
-    http.Response response = await http.get('https://corona.lmao.ninja/v2/all');
+    http.Response response =
+        await http.get('https://corona.lmao.ninja/v3/covid-19/all');
     setState(() {
       worldData = json.decode(response.body);
     });
